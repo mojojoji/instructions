@@ -39,3 +39,12 @@ sudo make install
 ```
 criu --version
 ```
+
+
+## Dump and Restore
+
+### Dump
+```
+mkdir -p /tmp/criu-images
+sudo criu dump -t 27110 --shell-job --tcp-established --images-dir /tmp/criu-images --file-locks
+```
